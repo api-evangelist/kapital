@@ -64,5 +64,20 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Kapital is a company surfaced via the API Evangelist harvest backlog (source: secondary-market) and added to the network as a stub for full-pipeline profiling.
-- https://www.hiive.com/securities/kapital-stock
+Kapital (KPTL MEXICO BANK, S.A., Institucion de Banca Multiple, Kapital Mexico Grupo Financiero) is a
+licensed Mexican bank and AI-native financial platform for SMEs and corporates, founded in 2019 and
+headquartered in Mexico City. It offers business and personal accounts, corporate cards, SPEI and SPID
+transfers, FX and derivatives, working-capital and revolving credit, factoring, and fixed-income
+investments, alongside Kapital IA. It is supervised by the CNBV and Banco de Mexico, with deposits
+protected by IPAB, and also operates in Colombia as Kapital Colombia.
+
+**No public API surface.** As of 2026-08-23, contract discovery found no developer portal, OpenAPI,
+GraphQL SDL, AsyncAPI, MCP server, agent card or SDK on any Kapital host. The banking surface is
+delivered through Kapital's own web and mobile applications. What Kapital *does* publish, and what
+this profile records, is a real `llms.txt` at https://kapital.com/llms.txt, a CNBV-mandated fee
+schedule, corporate-governance and financial-statement disclosures, and its Banxico payment-system
+participation (SPEI, SPID). See `x-coverage` in `apis.yml`.
+
+- Website: https://kapital.com/
+- Kapital Colombia: https://kapital.cc/
+- Secondary-market listing: https://www.hiive.com/securities/kapital-stock

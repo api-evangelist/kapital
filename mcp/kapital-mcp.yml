@@ -1,0 +1,32 @@
+generated: '2026-08-23'
+method: probed
+source: >-
+  POST tools/list probes against mcp.kapital.com/mcp, kapital.com/mcp, kapital.com/api/mcp
+  and api.kapital.com/mcp, 2026-08-23.
+status: absent
+deployment:
+  mode: none
+  endpoint: null
+  install: null
+  package: null
+  auth: unknown
+  verified: probed
+note: >-
+  Kapital ships no MCP server, hosted or local, and no candidate tool list could be derived
+  because Kapital publishes no OpenAPI to derive one from. No MCPServer pointer is wired in
+  apis.yml. No endpoint is guessed here on purpose: a fabricated MCP URL that happened to
+  answer 200 would read as a verified agent surface.
+probes:
+- url: https://mcp.kapital.com/mcp
+  status: 0
+  result: DNS does not resolve
+- url: https://kapital.com/mcp
+  status: 302
+  result: redirects to https://kapital.com/404
+- url: https://kapital.com/api/mcp
+  status: 302
+  result: redirects to https://kapital.com/404
+- url: https://api.kapital.com/mcp
+  status: 404
+  result: '"404 page not found" (18 bytes) from the Go origin'
+tools: []

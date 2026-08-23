@@ -1,0 +1,25 @@
+generated: '2026-08-23'
+method: searched
+source: https://kapital.com/recursos/costos-y-comisiones
+plan_count: 0
+note: >-
+  Kapital publishes no API plans, because it publishes no API. What it does publish at
+  /recursos/costos-y-comisiones (HTTP 200, observed 2026-08-23) is the CNBV-mandated banking
+  fee schedule for its deposit, card, credit and FX products - account maintenance,
+  transfer, cheque and card fees - not developer tiers, quotas, overages or rate ceilings.
+  Investment yields are published separately at /recursos/nuestras-tasas. plan_count is a
+  true zero for the API-plan sense of the field and must not be read as "not checked".
+plans: []
+related:
+  banking_fee_schedule:
+    url: https://kapital.com/recursos/costos-y-comisiones
+    http_status: 200
+    observed: '2026-08-23'
+  published_rates:
+    url: https://kapital.com/recursos/nuestras-tasas
+    http_status: 200
+    observed: '2026-08-23'
+  remuneration_report:
+    url: https://kapital.com/recursos/remuneraciones
+    http_status: 200
+    observed: '2026-08-23'

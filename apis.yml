@@ -1,17 +1,38 @@
 aid: kapital
 name: Kapital
-description: 'Kapital is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: >-
+  Kapital (KPTL MEXICO BANK, S.A., Institucion de Banca Multiple, Kapital Mexico Grupo
+  Financiero) is a licensed Mexican bank and AI-native financial platform for SMEs and
+  corporates, founded in 2019 and headquartered in Mexico City. Its ecosystem combines
+  business and personal deposit accounts, corporate cards, SPEI and SPID transfers, FX
+  cash/transfers/cheques and derivatives (forwards, interest rates), working-capital and
+  revolving credit (Credito Empresarial, Credito PyME, Credito FLEX), factoring, and
+  fixed-income investments (Pagare, CEDES) with Kapital IA, a native artificial-intelligence
+  layer that reconciles cash flow, projects sales, validates supplier pricing and flags
+  anomalous costs. It is supervised by the CNBV and Banco de Mexico, with deposits protected
+  by IPAB, and it also operates in Colombia as Kapital Colombia. Kapital publishes no public
+  developer portal, OpenAPI, SDK or webhook surface; the banking surface is delivered through
+  its own web and mobile applications.
+image: https://images.ctfassets.net/vr3zuj968faf/4ukUDPhZ4HcU709aDP2z4W/672ff99991179687f553c2de8c41dbd4/Kapital__1_.webp
 url: https://raw.githubusercontent.com/api-evangelist/kapital/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+x-secondary-market-listing: https://www.hiive.com/securities/kapital-stock
 specificationVersion: '0.20'
 created: '2026-08-23'
 modified: '2026-08-23'
 tags:
-- Company
+- Banking
+- Financial Services
+- FinTech
+- Small and Medium Businesses
+- Payments
+- Foreign Exchange
+- Lending
+- Treasury
+- Artificial Intelligence
+- Mexico
+- Latin America
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -19,5 +40,63 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/kapital-domain-security.yml
 - type: Website
-  url: https://www.hiive.com/securities/kapital-stock
+  url: https://kapital.com/
+- type: Blog
+  url: https://kapital.com/blog
+- type: Pricing
+  url: https://kapital.com/recursos/costos-y-comisiones
+- type: TermsOfService
+  url: https://kapital.com/recursos/terminos-y-condiciones
+- type: PrivacyPolicy
+  url: https://kapital.com/recursos/aviso-de-privacidad
+- type: SignUp
+  url: https://onboarding.kapital.com/registro-inicial
+- type: Login
+  url: https://app.kapital.com/
+- type: Support
+  url: https://kapital.com/recursos/aclaraciones
+- type: GitHubOrganization
+  url: https://github.com/KapitalMx
+- type: LLMsTxt
+  url: llms/kapital-llms.txt
+- type: Conformance
+  url: conformance/kapital-conformance.yml
+- type: Compliance
+  url: conformance/kapital-conformance.yml
+- type: Plans
+  url: plans/kapital-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/kapital-rate-limits.yml
+x-enrichment:
+  date: '2026-08-23'
+  status: minimal
+  artifacts_added: 8
+  pass: local-v1
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: >-
+    Kapital Bank ships regulated banking only as an end-user product - its whole 58-URL
+    sitemap contains no developer, API, integration or documentation page, robots.txt
+    disallows /api/*, and the only two API hosts that resolve are private app backends
+    (api.kapital.com answers "404 page not found" on every path behind Imperva, and
+    api.kapital.mx is an AWS ALB catch-all returning the same 50-byte
+    {"code":200,"message":"Exito","response":false} for every path including a nonexistent
+    control path).
+  evidence:
+  - url: https://kapital.com/sitemaps/sitemap-pages.xml
+    status: 200
+  - url: https://kapital.com/robots.txt
+    status: 200
+  - url: https://api.kapital.com/openapi.json
+    status: 404
+  - url: https://api.kapital.mx/.well-known/this-path-does-not-exist-ae-probe
+    status: 200
+  - url: https://developers.kapital.com/
+    status: 0
+  - url: https://kapital.com/llms.txt
+    status: 200
+  checked: '2026-08-23'

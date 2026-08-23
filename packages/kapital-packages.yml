@@ -1,0 +1,53 @@
+generated: '2026-08-23'
+method: searched
+source: >-
+  registry.npmjs.org, pypi.org, rubygems.org, crates.io and the kapital.com site nav,
+  probed 2026-08-23.
+package_count: 0
+packages: []
+note: >-
+  Kapital (Mexico) publishes no first-party client library on any registry. Its GitHub
+  organization, https://github.com/KapitalMx (verified: org "Kapital", blog field
+  "kapital.mx", created 2020-12-31), has 0 public repositories. No Packages or SDKs pointer
+  is wired in apis.yml, because there is nothing to point at.
+disambiguation:
+  warning: >-
+    Registry searches for "kapital" return real, actively-maintained payment-gateway
+    libraries that belong to a DIFFERENT company - Kapital Bank OJSC of Azerbaijan
+    (kapitalbank.az / birbank, founded 1874) - and none of them is first-party to either
+    company. They must never be attributed to Kapital Mexico.
+  rejected:
+  - registry: pypi
+    name: kapital
+    version: 1.0.5
+    url: https://pypi.org/project/kapital/
+    author_repo: https://github.com/kazimovzaman2/kapital-python
+    reason: >-
+      Third-party client for the Azerbaijani Kapital Bank payment gateway; unaffiliated with
+      Kapital Mexico and not published by either bank.
+  - registry: npm
+    name: kapitalbank
+    url: https://www.npmjs.com/package/kapitalbank
+    author_repo: https://github.com/eyvazoff/kapitalbank
+    reason: >-
+      Third-party Node client for the Azerbaijani Kapital Bank payment gateway; same
+      name collision.
+  - registry: packagist
+    name: twelver313/kapital-bank
+    url: https://packagist.org/packages/twelver313/kapital-bank
+    reason: >-
+      Third-party PHP client for the Azerbaijani Kapital Bank e-commerce API; same name
+      collision.
+  probed_and_absent:
+  - registry: pypi
+    names: [kapital-bank, kapitalbank, kapital-sdk]
+    status: 404
+  - registry: npm
+    names: ['@kapital/sdk', kapital-sdk]
+    status: 404
+  - registry: rubygems
+    names: [kapital]
+    status: 404
+  - registry: crates.io
+    names: [kapital]
+    status: 404

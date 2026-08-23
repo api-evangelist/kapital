@@ -1,0 +1,93 @@
+generated: '2026-08-23'
+method: probed
+source: >-
+  Direct HTTPS probes of every Kapital host reachable from apis.yml and the site nav
+  (kapital.com, api.kapital.com, api.kapital.mx, app.kapital.com, onboarding.kapital.com,
+  kapital.cc).
+note: >-
+  No /.well-known/ document is served by any Kapital host. Two distinct false-positive
+  shapes were observed and are recorded here so a later round does not promote them into
+  documents. (1) api.kapital.mx answers HTTP 200 with the identical 50-byte JSON body
+  {"code":200,"message":"Exito","response":false} for EVERY path, including paths that
+  cannot exist - a soft-200 catch-all, not a document. (2) app.kapital.com, kapital.cc and
+  onboarding.kapital.com are single-page applications whose catch-all returns the same HTML
+  shell (150881 / 93348 / 1557 bytes) for every /.well-known/* path. Neither shape is a
+  served discovery document, so NO WellKnown and NO SecurityTxt pointer is wired in apis.yml.
+hit_count: 0
+hosts:
+- host: https://kapital.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 302
+    file: null
+    note: 302 to https://kapital.com/404
+  - path: /.well-known/openid-configuration
+    status: 302
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 302
+    file: null
+  - path: /.well-known/oauth-protected-resource
+    status: 302
+    file: null
+  - path: /.well-known/api-catalog
+    status: 302
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 302
+    file: null
+- host: https://api.kapital.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+    note: 'Go origin behind Imperva/Incapsula; body is the 18-byte "404 page not found".'
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+- host: https://api.kapital.mx
+  soft_404_control:
+    path: /.well-known/this-path-does-not-exist-ae-probe
+    status: 200
+    bytes: 50
+    body: '{"code":200, "message":"Exito", "response": false}'
+    note: >-
+      Control probe returns the same 200 + 50 bytes as every real path, proving the host is
+      a catch-all. No document recorded.
+  documents: []
+- host: https://app.kapital.com
+  soft_404_control:
+    path: /.well-known/this-path-does-not-exist-ae-probe
+    status: 200
+    bytes: 150881
+    content_type: text/html
+    note: SPA shell returned for every path.
+  documents: []
+- host: https://onboarding.kapital.com
+  soft_404_control:
+    path: /.well-known/this-path-does-not-exist-ae-probe
+    status: 200
+    bytes: 1557
+    content_type: text/html
+    note: SPA shell returned for every path.
+  documents: []
+- host: https://kapital.cc
+  soft_404_control:
+    path: /.well-known/this-path-does-not-exist-ae-probe
+    status: 200
+    bytes: 93348
+    content_type: text/html
+    note: Webflow catch-all returned for every path (Kapital Colombia).
+  documents: []

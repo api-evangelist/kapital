@@ -1,0 +1,14 @@
+generated: '2026-08-23'
+method: searched
+source: https://kapital.com/
+limit_count: 0
+note: >-
+  No rate limits are documented, because Kapital publishes no public API. Its 58-page
+  sitemap (https://kapital.com/sitemaps/sitemap-pages.xml, HTTP 200) contains no developer,
+  API, integration or documentation page, and robots.txt disallows /api/*. The two API hosts
+  that do resolve are not public products: api.kapital.com is a Go origin behind
+  Imperva/Incapsula that answers "404 page not found" on every probed path, and
+  api.kapital.mx is an AWS ALB soft-200 catch-all. Neither publishes limits, headers, or a
+  429 contract. limit_count is a true zero, not an unchecked field.
+rate_limits: []
+response_headers: []

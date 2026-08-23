@@ -1,0 +1,130 @@
+generated: '2026-08-23'
+method: searched
+source: https://kapital.com/llms.txt
+note: >-
+  Kapital publishes no machine-readable API contract, so nothing here is derived from a
+  spec. Every entry below is a claim Kapital makes on its own site or in its own llms.txt,
+  with the exact page it was read from. The cross-cutting API standards this pipeline
+  normally checks (OAuth 2.0, OIDC, RFC 9457, pagination, idempotency, JSON:API, OData,
+  SCIM) are all recorded as not-applicable rather than false: there is no public API
+  surface for them to apply to.
+scope: >-
+  Regulatory and domain-standard conformance of KPTL MEXICO BANK, S.A., Institucion de Banca
+  Multiple, Kapital Mexico Grupo Financiero.
+conformance:
+- id: cnbv-supervised-banking-institution
+  name: Supervised by the Comision Nacional Bancaria y de Valores (CNBV)
+  conforms: true
+  evidence:
+    quote: >-
+      KPTL MEXICO BANK, S.A., INSTITUCION DE BANCA MULTIPLE, KAPITAL MEXICO GRUPO FINANCIERO
+      - Entidad supervisada por la Comision Nacional Bancaria y de Valores (CNBV).
+    url: https://kapital.com/recursos/gobierno-corporativo
+    http_status: 200
+    observed: '2026-08-23'
+- id: banxico-supervised
+  name: Supervised by Banco de Mexico (Banxico)
+  conforms: true
+  evidence:
+    quote: >-
+      Entidad financiera estrictamente supervisada por la Comision Nacional Bancaria y de
+      Valores (CNBV) y Banco de Mexico (Banxico).
+    url: https://kapital.com/llms.txt
+    http_status: 200
+    observed: '2026-08-23'
+- id: ipab-deposit-protection
+  name: Deposits protected by IPAB (Instituto para la Proteccion al Ahorro Bancario)
+  conforms: true
+  evidence:
+    url: https://kapital.com/recursos/productos-protegidos-por-el-ipab
+    http_status: 200
+    observed: '2026-08-23'
+- id: condusef-une
+  name: CONDUSEF complaint regime with a published UNE (Unidad Especializada de Atencion)
+  conforms: true
+  evidence:
+    quote: 'Atencion a controversias: UNE Kapital y CONDUSEF (800 999 8080).'
+    url: https://kapital.com/recursos/une
+    http_status: 200
+    observed: '2026-08-23'
+- id: buro-de-entidades-financieras
+  name: Listed in the CONDUSEF Buro de Entidades Financieras
+  conforms: true
+  evidence:
+    url: https://kapital.com/recursos/costos-y-comisiones
+    http_status: 200
+    observed: '2026-08-23'
+- id: published-financial-statements
+  name: Publishes audited financial statements and corporate-governance disclosures
+  conforms: true
+  evidence:
+    url: https://kapital.com/recursos/estados-financieros
+    http_status: 200
+    observed: '2026-08-23'
+
+domain_standards:
+  note: >-
+    Kapital's market is Mexican regulated banking, whose domain standards are the Banxico
+    payment systems. Kapital participates in them as a licensed multiple-banking institution
+    and says so on its own product pages. IMPORTANT: none of these is DECLARED IN A CONTRACT,
+    because Kapital publishes no contract. contract_declared is false on every row, so this
+    block is a product/regulatory claim, not a spec signature, and must not be scored as one.
+  standards:
+  - id: spei
+    name: SPEI - Sistema de Pagos Electronicos Interbancarios (Banco de Mexico)
+    conforms: true
+    contract_declared: false
+    evidence:
+      quote: >-
+        Puedes recibir depositos, emitir transferencias nacionales (SPEI), hacer pagos
+        masivos, programar dispersion de nomina y domiciliar servicios, todo desde la
+        plataforma digital.
+      url: https://kapital.com/cuentas/cuenta-pyme
+      http_status: 200
+      observed: '2026-08-23'
+  - id: spid
+    name: SPID - Sistema de Pagos Interbancarios en Dolares (Banco de Mexico)
+    conforms: true
+    contract_declared: false
+    evidence:
+      quote: >-
+        SPID te permite mover dolares entre empresas en Mexico al instante, sin conversiones
+        ni bancos corresponsales.
+      url: https://kapital.com/divisas/transferencias-interbancarias-en-dolares
+      http_status: 200
+      observed: '2026-08-23'
+  - id: sat-ciec
+    name: SAT CIEC credential access (Mexican tax-authority data ingestion for Kapital IA)
+    conforms: true
+    contract_declared: false
+    evidence:
+      quote: >-
+        requiere dar consentimiento y acceso a traves de tu clave CIEC.
+      url: https://kapital.com/servicios/inteligencia-artificial
+      http_status: 200
+      observed: '2026-08-23'
+  - id: apple-pay
+    name: Apple Pay tokenized card provisioning
+    conforms: true
+    contract_declared: false
+    evidence:
+      url: https://kapital.com/recursos/apple-pay
+      http_status: 200
+      observed: '2026-08-23'
+
+not_applicable:
+  reason: >-
+    No public API contract exists, so these cross-cutting API standards have no surface to
+    apply to. Recorded as na rather than false - an absent API is not a failed standard.
+  standards:
+  - oauth2
+  - oidc
+  - rfc9457
+  - pagination
+  - idempotency
+  - json:api
+  - odata
+  - scim
+  - fapi
+  - psd2
+  - fdx
