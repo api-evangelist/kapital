@@ -13,6 +13,17 @@ description: >-
   by IPAB, and it also operates in Colombia as Kapital Colombia. Kapital publishes no public
   developer portal, OpenAPI, SDK or webhook surface; the banking surface is delivered through
   its own web and mobile applications.
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 image: https://images.ctfassets.net/vr3zuj968faf/4ukUDPhZ4HcU709aDP2z4W/672ff99991179687f553c2de8c41dbd4/Kapital__1_.webp
 url: https://raw.githubusercontent.com/api-evangelist/kapital/refs/heads/main/apis.yml
 x-type: company
