@@ -47,7 +47,7 @@ created: '2026-08-23'
 modified: '2026-08-23'
 tags:
 - Banking
-- Financial-Services
+- Financial Services
 - Fintech
 - Small and Medium Businesses
 - Payments
@@ -69,6 +69,7 @@ tags_raw:
 - Artificial Intelligence
 - Mexico
 - Latin America
+- Financial-Services
 apis: []
 maintainers:
 - FN: Kin Lane
