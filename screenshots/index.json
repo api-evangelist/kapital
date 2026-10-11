@@ -1,0 +1,11 @@
+[
+  {
+    "repo": "kapital",
+    "captured_at": "2026-10-11T190411",
+    "source_url": "https://kapital.com/",
+    "source_type": "Website",
+    "file": "kapital-2026-10-11T190411.png",
+    "bytes": 349858,
+    "capture": "playwright-local"
+  }
+]
