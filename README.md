@@ -64,20 +64,98 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Kapital (KPTL MEXICO BANK, S.A., Institucion de Banca Multiple, Kapital Mexico Grupo Financiero) is a
-licensed Mexican bank and AI-native financial platform for SMEs and corporates, founded in 2019 and
-headquartered in Mexico City. It offers business and personal accounts, corporate cards, SPEI and SPID
-transfers, FX and derivatives, working-capital and revolving credit, factoring, and fixed-income
-investments, alongside Kapital IA. It is supervised by the CNBV and Banco de Mexico, with deposits
-protected by IPAB, and also operates in Colombia as Kapital Colombia.
+Kapital (KPTL MEXICO BANK, S.A., Institucion de Banca Multiple, Kapital Mexico Grupo Financiero) is a licensed Mexican bank and AI-native financial platform for SMEs and corporates, founded in 2019 and headquartered in Mexico City. Its ecosystem combines business and personal deposit accounts, corporate cards, SPEI and SPID transfers, FX cash/transfers/cheques and derivatives (forwards, interest rates), working-capital and revolving credit (Credito Empresarial, Credito PyME, Credito FLEX), factoring, and fixed-income investments (Pagare, CEDES) with Kapital IA, a native artificial-intelligence layer that reconciles cash flow, projects sales, validates supplier pricing and flags anomalous costs. It is supervised by the CNBV and Banco de Mexico, with deposits protected by IPAB, and it also operates in Colombia as Kapital Colombia. Kapital publishes no public developer portal, OpenAPI, SDK or webhook surface; the banking surface is delivered through its own web and mobile applications.
 
-**No public API surface.** As of 2026-08-23, contract discovery found no developer portal, OpenAPI,
-GraphQL SDL, AsyncAPI, MCP server, agent card or SDK on any Kapital host. The banking surface is
-delivered through Kapital's own web and mobile applications. What Kapital *does* publish, and what
-this profile records, is a real `llms.txt` at https://kapital.com/llms.txt, a CNBV-mandated fee
-schedule, corporate-governance and financial-statement disclosures, and its Banxico payment-system
-participation (SPEI, SPID). See `x-coverage` in `apis.yml`.
+**Areas:** Banking · Financial Services · Fintech · Small and Medium Businesses · Payments · Foreign Exchange · Lending · Treasury · Artificial Intelligence · Mexico · Latin America
 
-- Website: https://kapital.com/
-- Kapital Colombia: https://kapital.cc/
-- Secondary-market listing: https://www.hiive.com/securities/kapital-stock
+## Kapital on APIs.io
+
+Everything profiled for Kapital is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/kapital/](https://apis.io/providers/kapital/)** — or go straight to one of the APIs or properties below.
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### Security (1)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Kapital Domain Security](https://apis.io/security/kapital/kapital-domain-security/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Kapital Plans Pricing](https://apis.io/plans/kapital/kapital-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Kapital Rate Limits](https://apis.io/rate-limits/kapital/kapital-rate-limits/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://kapital.com/)
+- [Pricing](https://kapital.com/recursos/costos-y-comisiones)
+- [Sign up](https://onboarding.kapital.com/registro-inicial)
+- [Support](https://kapital.com/recursos/aclaraciones)
+- [Blog](https://kapital.com/blog)
+- [Terms of service](https://kapital.com/recursos/terminos-y-condiciones)
+- [Privacy policy](https://kapital.com/recursos/aviso-de-privacidad)
+- [GitHub](https://github.com/KapitalMx)
+
+## API Evangelist rating
+
+**Kin Score 18.3** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 55.4 |
+| Contract quality | 0.0 |
+| Contract governance | 18.2 |
+| Operational transparency | 2.6 |
+| Developer ergonomics | 7.1 |
+| Access clarity | 46.1 |
+
+**Agent readiness 2.5** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 17.8** — Banking & Open Finance
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/kapital/](https://apis.io/providers/kapital/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Kapital: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/kapital/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
